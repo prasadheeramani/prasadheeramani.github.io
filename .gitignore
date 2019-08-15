@@ -1,0 +1,13 @@
+# Next build artifacts
+.next
+
+# Dependencies
+node_modules
+
+# Log files
+*.log
+
+out
+static/favicons/
+
+.vscode

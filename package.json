@@ -1,0 +1,42 @@
+{
+  "name": "hrabo-portfolio",
+  "license": "MIT",
+  "scripts": {
+    "start": "next",
+    "build-icons": "node scripts/favicons",
+    "build": "yarn build-icons && next build ",
+    "export": "next export",
+    "commit": "npx git-cz",
+    "stest": "next build && next export && http-server ./out"
+  },
+  "dependencies": {
+    "next": "^8.0.1",
+    "next-offline": "^3.3.6",
+    "next-page-transitions": "^1.0.0-alpha.6",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "favicons": "^5.3.0"
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true
+        }
+      ]
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

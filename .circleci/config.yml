@@ -1,0 +1,47 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+    working_directory: ~/portfolio
+    docker:
+      - image: circleci/node:10.5.0
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install
+          command: yarn install
+      - run:
+          name: Building and exporting
+          command: |
+            yarn build
+            yarn export
+            touch ./out/.nojekyll
+            cp ./static/googlef3ce3353ce89ff8c.html ./out/
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Deploy to gh pages
+          working_directory: ~/portfolio/out
+          command: |
+            git init
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "prasadheeramani@gmail.com"
+            git config user.name "prasadheeramani"
+            git add .
+            git commit --allow-empty -m "Update"
+            git remote add origin https://prasadheeramani:${GITHUB_TOKEN}@github.com/prasadheeramani/prasadheeramani.github.io.git
+            git branch tmp
+            git push -f -q origin tmp:master
+      - run:
+          name: Creating a release
+          working_directory: ~/portfolio
+          command: npx semantic-release
+      # - run:
+      #     name: test
+      #     command: npm test

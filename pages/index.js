@@ -129,6 +129,11 @@ class index extends Component {
   }
 
   render() {
+    // gtag.event({
+    //   action: "submit_form",
+    //   category: "Contact",
+    //   label: this.state.message
+    // });
     return (
       <Page currentPage="/">
         <Card backgroundImage>

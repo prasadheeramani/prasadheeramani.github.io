@@ -55,7 +55,7 @@ class contact extends Component {
               </Link>
             </p>
 
-            <p>Phone: 8436929996</p>
+            <p>Phone: +91 8436929996</p>
           </Container>
         </Card>
       </Page>

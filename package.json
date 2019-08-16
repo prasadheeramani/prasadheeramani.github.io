@@ -3,6 +3,7 @@
   "license": "MIT",
   "scripts": {
     "start": "next",
+    "postexport": "node scripts/postExport.js",
     "build-icons": "node scripts/favicons",
     "build": "yarn build-icons && next build ",
     "export": "next export",

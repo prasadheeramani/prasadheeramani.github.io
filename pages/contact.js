@@ -29,6 +29,11 @@ class contact extends Component {
               </Link>
             </p>
             <p>
+              <Link href="https://wa.me/+918436929996?text=Thanks%20for%20messaging%20me.%20I%20try%20to%20as%20be%20as%20responsive%20as%20possible%20and%20will%20try%20to%20get%20soon.">
+                Whatsapp
+              </Link>
+            </p>
+            <p>
               <Link href="https://linkedin.com/in/prasadheeramani.com">
                 LinkedIn
               </Link>

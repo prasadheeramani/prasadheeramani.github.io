@@ -4,7 +4,7 @@
   "scripts": {
     "start": "next",
     "postexport": "node scripts/postExport.js",
-    "build-icons": "node scripts/favicons",
+    "build-icons": "node scripts/favicons && node scripts/postExport.js",
     "build": "yarn build-icons && next build ",
     "export": "next export",
     "commit": "npx git-cz",

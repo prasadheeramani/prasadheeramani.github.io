@@ -25,7 +25,13 @@ class MyDocument extends Document {
   render() {
     return (
       <html lang="en">
-        <Head>{this.props.styleTags}</Head>
+        <Head>
+          {this.props.styleTags}
+          <meta
+            name="google-site-verification"
+            content="BlPz8eQZC18W_26rALJs9WAv9pDRstWg9zmEzooTcJQ"
+          />
+        </Head>
         <PageHead {...site_config} query={this.props.asPath} />
         <body>
           <Main />

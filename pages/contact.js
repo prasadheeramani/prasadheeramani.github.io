@@ -34,7 +34,7 @@ class contact extends Component {
               </Link>
             </p>
             <p>
-              <Link href="https://linkedin.com/in/prasadheeramani.com">
+              <Link href="https://www.linkedin.com/in/prasadheeramani">
                 LinkedIn
               </Link>
             </p>
@@ -50,9 +50,7 @@ class contact extends Component {
               </Link>
             </p>
             <p>
-              <Link href="https://www.messenger.com/t/heeramani.prasad">
-                Messenger
-              </Link>
+              <Link href="https://m.me/prasadheeramani">Messenger</Link>
             </p>
 
             <p>Phone: +91 8436929996</p>
